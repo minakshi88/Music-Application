@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <img src="img/library.png" class="icon" id="menu-icon" />
+
+      <nav>
+        <img src="img/cancel.png" class="icon" id="cancel-icon">
+        <h3>Music Player</h3>
+        <div class="all-songs" id="all-songs-container">
+          <div class="menu-item">
+          <img src="img/all-songs.webp" class="icon">
+          <span>All Songs</span>
+        </div>
+        </div>
+        <ul id="all-songs"></ul>
+        <div id="add-song-btn">
+          <div class="menu-item">
+          <img src="img/add.png" class="icon add-icon" id="add-icon" />
+          <span>Add New Song</span>
+        </div>
+          
+        </div>
+        <div class="new-song-container" id="new-song-container">
+          <form>
+          <input type="file" id="file-picker" accept="audio/*" multiple/>
+        </form>
+        </div>
+      </nav>
+
+      <div class="music-card">
+        <div id="album-img"></div>
+    
+        <div class="icons">
+          <div class="track-slider">
+            <input
+              type="range"
+              value="0"
+              min="1"
+              max="100"
+              id="track-slider"
+              class="track-slider"
+            />
+          </div>
+          <div>
+            <img src="img/mix.png" class="icon" id="mix" />
+            <img src="img/prev-song.png" class="icon" id="left" />
+            <span src="img/play2.webp" class="icon" id="play">►</span>
+            <img src="img/next-song.png" class="icon" id="right" />
+            <img src="img/repeat.png" class="icon" id="repeat" />
+          </div>
+
+          <div class="volume">
+            <img src="img/volume.png" class="icon" id="volume" />
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="60"
+              id="volume-slider"
+            />
+          </div>
+        </div>
+        <footer>
+          <span class="title">Now Playing</span>
+          <h2 id="current-song-name">Hydelic - Yours Forever</h2>
+          <span id="change-warning"></span>
+        </footer>
+        <audio id="music" src="music/connected.m4a"></audio>
+      </div>
+    </div>
+  </body>
+</html>
